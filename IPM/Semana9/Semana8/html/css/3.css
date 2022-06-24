@@ -1,0 +1,116 @@
+
+
+header {
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-area:header;
+    }
+nav {
+    background-color:lightgrey;
+    grid-area: nav;
+    height:50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+main{
+    background-color:white;
+    grid-area:content;
+    display: flex;
+    justify-content: space-between ;
+    flex-direction: column;
+}
+aside{
+    background-color: lightyellow;
+    grid-area:aside;
+
+}
+footer{
+    background-color: moccasin;
+    grid-area:footer;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+}
+
+
+.grid-container {
+    display: grid;
+     grid-template-columns: auto 25%;
+     column-gap:3px;
+     row-gap: 10px;
+     grid-template-areas:
+     "header header"
+     "nav nav"
+     "content aside"
+     "footer footer";
+     }
+
+@media (max-width:800px) {
+    .grid-container {
+        display: grid;
+         grid-template-columns: auto;
+         row-gap: 10px;
+         grid-template-areas:
+         "header"
+         "nav "
+         "aside"
+         "content"
+         "footer";
+         }
+
+}
+
+@media (max-width:600px) {
+
+        #user{
+        display: none;
+        }
+        #auxiliar{
+            display: flex;
+            flex-direction:column;
+            row-gap: 7px;
+            width: 50%;
+
+            
+        }
+        
+
+}
+     .links{
+         display: flex;
+         justify-content: flex-end;
+         list-style-type: none;
+        
+     }
+
+     .links a{
+        padding:15px;
+        height: 10px;
+     }
+    .tabela{
+        width: 100%;
+     border-collapse: collapse;
+    }
+    .tabela thead{
+        background-color: grey;
+
+    }
+    .tabela ,.tabela th , .tabela td{
+        border: 1px solid grey;
+    }
+    .numbers{
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+    }
+    .numbers a{
+        padding: 8px;
+        background-color:lightyellow;
+        margin-right: 5px;
+    }

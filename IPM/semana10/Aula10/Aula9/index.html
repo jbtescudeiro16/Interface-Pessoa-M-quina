@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="style/starter-template.css" rel="stylesheet">
+
+    <title>Template</title>
+</head>
+
+<body>
+    <div class="container" id="gamesApp">
+
+        <div class="row">
+            <h1>App name</h1>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    {{userName}}
+                    <div class="container-fluid">
+
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link active" aria-current="page" href="#">My Games</a>
+                                <a class="nav-link" href="#">All Games</a>
+                                <a class="nav-link" href="#">Add Game</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 d-flex flex-column">
+                <table class="table table-borderless table-striped table-hover">
+                    <thead>
+                        <th>Game</th>
+                        <th>Year</th>
+                        <th>Platform</th>
+                    </thead>
+
+                    <tr v-for="g in games">
+                        <td>{{g.name}}</td>
+                        <td>{{g.year}}</td>
+                        <td>{{g.platform}}</td>
+                    </tr>
+
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-4 d-flex flex-column">
+                <div>Filter</div>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Year</option>
+                    <option v-for="y in years"> {{y}}</option>
+
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Platform</option>
+                    <option value="1992">Megadrive</option>
+                    <option value="2017">PC</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+                <p>Footer Information ©
+                <p>
+            </div>
+        </div>
+
+    </div><!-- /.container -->
+
+
+    <form>
+        <input type="button" value="Click ME " id="button" />
+
+        <div id="show"> </div>
+
+    </form>
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- production version, optimized for size and speed -->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/games.js"></script>
+
+</body>
+
+</html>

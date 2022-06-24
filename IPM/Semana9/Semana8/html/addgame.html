@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <link rel="stylesheet" href="css/addgame.css">
+</head>
+
+<body>
+    <form action="4.html">
+        <h1>Add Game</h1>
+
+        <p><label for="Game Name"><b>Game Name</b></label> </p>
+        <p><input type="text" placeholder="Type text" name="Game Name" required></p>
+        <p><label for="Year"> <b>Year</b></label></p>
+        <p><input type="text" placeholder="Type text" name="Year" required></p>
+        <p><label for="Platform"><b>Platform</b> </label></p>
+        <p><input type="text" placeholder="Type text" name="Platform" required></p>
+        <p><label for="Picture URL"><b> Picture URL</b></label></p>
+        <p><input type="text" placeholder="Type text" name="Picture URL" required></p>
+        <p><label for="Description"><b> Description</b></label></p>
+        <textarea rows="5" cols="60" name="description"></textarea>
+
+        <input type="submit" value="Click" onclick="passvalues();" />
+    </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
